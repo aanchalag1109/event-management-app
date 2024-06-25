@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "4e32dc97-afb5-46f1-bcf2-a392735c2b4f",
+		"name": "Event Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33188599",
+		"_collection_link": "https://cloudy-firefly-325984.postman.co/workspace/New-Team-Workspace~5a23c8f1-7618-4a89-aacd-c858f023afca/collection/33188599-4e32dc97-afb5-46f1-bcf2-a392735c2b4f?action=share&source=collection_link&creator=33188599"
+	},
+	"item": [
+		{
+			"name": "add event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventName\":\"test event\",\r\n    \"eventDate\":\"2024-06-25T10:06:13.700+00:00\",\r\n    \"organizer\":\"test\",\r\n    \"email\":\"aanchal@gmail.com\",\r\n    \"phone\":\"9988778787\",\r\n    \"location\":{\r\n        \"street\":\"kala kuan\",\r\n        \"city\":\"Alwar\",\r\n        \"state\":\"Rajasthan\",\r\n        \"zip\":\"301001\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update event",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"location\": {\r\n            \"street\": \"kala kuan\",\r\n            \"city\": \"Alwar\",\r\n            \"state\": \"Rajasthan\",\r\n            \"zip\": \"301001\"\r\n        },\r\n        \"eventName\": \"test event update\",\r\n        \"eventDate\": \"2024-06-25T10:06:13.700Z\",\r\n        \"organizer\": \"test\",\r\n        \"email\": \"aanchal@gmail.com\",\r\n        \"phone\": \"9988778787\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/events/667ab2e8333e26711dd290ea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"events",
+						"667ab2e8333e26711dd290ea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get event by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/events/667ab2e8333e26711dd290ea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"events",
+						"667ab2e8333e26711dd290ea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete event",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
