@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+
+# TypeScript build output
+dist/
+
+# Environment variables file
+.env
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Log files
+*.log
+
+# npm debug log
+npm-debug.log*
+
+# Yarn integrity file
+.yarn-integrity
